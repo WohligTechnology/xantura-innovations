@@ -1,0 +1,54 @@
+{
+    "title": "​Contact",
+    "description": "List of ​Contact",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "User Email",
+            "isSort": "",
+            "tableRef": "userEmail"
+        }, {
+            "name": "Name",
+            "isSort": "",
+            "tableRef": "name"
+        },
+        {
+            "name": "Number",
+            "isSort": "",
+            "tableRef": "number"
+        }, 
+        {
+            "name": "Comments",
+            "isSort": "",
+            "tableRef": "comments"
+        }
+    ],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editContact",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Contact",
+        "content": "Are you sure you want to delete Contact?",
+        "api": "contact/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [],
+    "apiCall": {
+        "url": "Contact/search",
+        "params": "_id"
+    }
+}

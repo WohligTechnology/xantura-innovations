@@ -1,0 +1,67 @@
+{
+    "title": "Create ​Contact",
+    "name": "​Contact",
+    "jsonPage": "view​Contact",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["​Contact"],
+    "fields": [{
+            "name": "Email",
+            "type": "text",
+            "tableRef": "userEmail",
+            "placeholder": "Enter Email",
+            "id": "userEmail",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        },
+        {
+            "name": "Name",
+            "type": "text",
+            "tableRef": "name",
+            "placeholder": "Enter name",
+            "id": "name",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        },
+        {
+            "name": "Number",
+            "type": "text",
+            "tableRef": "number",
+            "placeholder": "number",
+            "id": "number",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        },
+        {
+            "name": "Comments",
+            "type": "text",
+            "tableRef": "comments",
+            "placeholder": "comments",
+            "id": "comments",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submit​Contact",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "view​Contact"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "view​Contact"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "​Contact/save"
+    }
+}

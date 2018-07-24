@@ -1,0 +1,134 @@
+.home {
+    .blue {
+        background-color: #022b63;
+        color: white
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        .home-slider {
+            height: 45vh;
+            background-size: cover !important;
+            background-position: center center !important;
+            position: relative !important;
+        }
+        .swiper-slide {
+            font-size: inherit;
+        }
+        a {
+            color: $white;
+        }
+        .swiper-button-next {
+            background-image: url('../img/gonext.png');
+            right: 50px;
+            left: auto;
+        }
+        .swiper-button-prev {
+            background-image: url('../img/goprevious.png');
+            left: 50px;
+            right: auto;
+        }
+        .slider-content {
+            position: absolute;
+            bottom: 50px;
+            h4 {
+                color: $white;
+            }
+            .text-content {
+                color: $white;
+                width: 300px;
+            }
+        }
+    }
+    .outnexp {
+        @extend .gray-bg;
+        .title {
+            h4.background {
+                color: $neavyblue;
+                padding: 35px 0px;
+                margin-bottom: 0;
+                position: relative;
+                z-index: 1;
+                &:before {
+                    border-top: 2px solid $neavyblue;
+                    content: "";
+                    margin: 0 auto;
+                    /* this centers the line to the full width specified */
+                    position: absolute;
+                    /* positioning must be absolute here, and relative positioning must be applied to the parent */
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 50%;
+                    z-index: -1;
+                }
+                span {
+                    /* to hide the lines from behind the text, you have to set the background color the same as the container */
+                    padding: 0 15px;
+                    background: $gray-lightest;
+                }
+            }
+        }
+        .block {
+            .bg-block {
+                height: auto;
+                position: relative;
+                display: block;
+            }
+        }
+    }
+    .discuss-now {
+        padding: 15px 0px;
+        color: $gray-text;
+        .discuss-btn {
+            border-radius: 4px;
+        }
+    }
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.middle {
+    background: white;
+    padding: 15px; // height: 140px;
+    overflow: hidden;
+}
+
+.text {
+    h4 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 120%;
+        /* fallback */
+        height: 60px;
+        /* fallback */
+        -webkit-line-clamp: 3;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;
+        margin: 0 0 10px;
+    }
+}
+
+.hover-shadow {
+    border-radius: 3px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    @include transition(all 300ms ease);
+    &:hover {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+    }
+}

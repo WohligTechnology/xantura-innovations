@@ -1,0 +1,82 @@
+{
+    "title": "Edit User",
+    "name": "User",
+    "jsonPage": "viewUser",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "Username",
+            "type": "text",
+            "tableRef": "username",
+            "placeholder": "Enter Username"
+        }, {
+            "name": "Password",
+            "type": "password",
+            "tableRef": "password",
+            "placeholder": "Enter Password"
+        }, {
+            "name": "Email",
+            "type": "text",
+            "tableRef": "email",
+            "placeholder": "Enter Email",
+            "id": "email",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        },
+        {
+            "name": "Request Approved",
+            "type": "checkbox",
+            "tableRef": "requestApproved",
+            "placeholder": "requestApproved",
+            "id": "requestApproved",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        }, {
+            "name": "Last Opened",
+            "type": "date",
+            "tableRef": "lastOpened",
+            "placeholder": "Enter lastOpened",
+            "id": "lastOpened",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
+        },
+        {
+            "name": "Admin",
+            "type": "checkbox",
+            "tableRef": "admin",
+            "placeholder": "admin",
+            "id": "admin",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitUser",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewUser"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewUser"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "User/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "User/getOne",
+        "params": "_id"
+    }
+
+}

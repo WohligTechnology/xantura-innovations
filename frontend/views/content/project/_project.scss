@@ -1,0 +1,86 @@
+//PROJECT
+.project {
+    .modal-content {
+        background: transparent;
+    }
+    button {
+        border-radius: 4px;
+    }
+    .bg-project {
+        height: 45vh;
+        background-size: cover !important;
+        background-position: center center !important;
+        position: relative !important;
+        .bg-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include prefixer(transform, translate(-50%, -50%), ("webkit", "moz"));
+            h3 {
+                color: $white;
+            }
+        }
+        .bottom-text {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            @include prefixer(transform, translate(-50%, 0%), ("webkit", "moz"));
+            p {
+                font-family: $Merri;
+                color: $blue;
+                margin: 0;
+                padding: 5px 0;
+            }
+        }
+    }
+    .block {
+        margin: 40px 0px 100px;
+        .table {
+            max-width: 600px;
+            margin: 15px auto 0;
+            th,
+            td {
+                padding: 6px 5px;
+            }
+            &.no-max-width {
+                max-width: none;
+            }
+        }
+        hr {
+            background: url(../img/hr.svg) no-repeat;
+            display: block;
+            height: 15px;
+            background-position: center center;
+            border: 0;
+            background-size: contain;
+            margin: 20px auto;
+        }
+    }
+    .marco-content {
+        margin-bottom: 20px;
+    }
+}
+
+.table {
+    thead {
+        &.thead-info {
+            background-color: $tui-blue;
+            color: white;
+        }
+    }
+    &.table-striped {
+        color: $tui-dark-blue;
+    }
+}
+
+.table-info {
+    &.table-bordered th,
+    &.table-bordered td {
+        border: 1px solid #ffffff;
+    }
+    &.table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(255, 255, 255, 0.45);
+    }
+}

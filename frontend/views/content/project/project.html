@@ -1,0 +1,69 @@
+<div class="project" ng-if="project">
+    <!-- BACKGROUND IMAGE -->
+    <div class="bg-project" style="background:linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, .5)),url({{project.bannerImage | uploadpath}});">
+
+
+        <div class="container relative pt-2">
+            <a class="btn btn-light btn-sm text-uppercase btn-float-left" ui-sref="app.home">
+                <i class="fa fa-angle-left"></i> Back
+            </a>
+        </div>
+
+        <div class="bg-text text-center text-uppercase">
+            <h3>{{project.name}}</h3>
+
+            <div ng-if="project.demoLink!='nolink' && project.verifyName!='mediapool'">
+                <!-- If We have demo link -->
+                <a ng-if="project.demoLink" class="btn btn-light text-uppercase" ui-sref="app.project-demo({url: project.demoLink,id: project._id})"
+                    ng-click="gaViewDemo(project.name)">
+                    <i class="fas fa-eye"></i> View Demo
+                </a>
+
+                <!-- If We dont have demo link -->
+                <button ng-if="!project.demoLink" type="button" class="btn btn-light text-uppercase" ng-click="openRequest();">
+                    <i class="fas fa-eye"></i> Request a Demo
+                </button>
+            </div>
+
+            <div ng-if="project.demoLink!='nolink' && project.verifyName=='mediapool'">
+                <a class="btn btn-light text-uppercase" href="https://mediapool.content.tuigroup.com/" target="_blank" uib-tooltip="Have TUI Access">
+                    <i class="fas fa-eye"></i> View Demo
+                </a>
+
+                <button type="button" class="btn btn-light text-uppercase" ng-click="openRequest();" uib-tooltip="Do not have TUI Access">
+                    <i class="fas fa-eye"></i> Request a Demo
+                </button>
+            </div>
+
+        </div>
+        <div class="bottom-text text-center">
+            <p>"{{project.punchLine}}"</p>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container">
+        <div class="block">
+
+            <!-- Description -->
+            <div class="text-center">
+                <span ng-bind-html="project.details"></span>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="row">
+                <div class="marco-content col-sm-6 text-center">
+                    <h3 class="text-uppercase">Want to know more?</h3>
+                    <button class="btn btn-primary text-uppercase" ng-click="openContact()">Let's Discuss</button>
+                </div>
+
+                <!-- Feedback -->
+                <div class="marco-content col-sm-6 text-center">
+                    <h3 class="text-uppercase">Have some thoughts?</h3>
+                    <button class="btn btn-primary text-uppercase" ng-click="openFeedback()">
+                        <i class="fas fa-edit"></i> Share Your Feedback</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

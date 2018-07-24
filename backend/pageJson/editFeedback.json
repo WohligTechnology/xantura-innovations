@@ -1,0 +1,64 @@
+{
+    "title": "Edit Feedback",
+    "name": "Feedback",
+    "jsonPage": "viewFeedback",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "Rating",
+            "type": "number",
+            "tableRef": "rating",
+            "placeholder": "Enter rating",
+            "id": "rating",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        },
+        {
+            "name": "Comment",
+            "type": "text",
+            "tableRef": "comment",
+            "placeholder": "Enter comment",
+            "id": "comment",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        },
+        {
+            "name": "User Email",
+            "type": "text",
+            "tableRef": "userEmail",
+            "placeholder": "userEmail",
+            "id": "userEmail",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitFeedback",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewFeedback"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewFeedback"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Feedback/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Feedback/getOne",
+        "params": "_id"
+    }
+
+}

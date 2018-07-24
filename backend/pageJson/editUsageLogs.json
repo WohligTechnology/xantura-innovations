@@ -1,0 +1,55 @@
+{
+    "title": "Edit UsageLogs",
+    "name": "UsageLogs",
+    "jsonPage": "viewUsageLogs",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "User Email",
+            "type": "text",
+            "tableRef": "userEmail",
+            "placeholder": "Enter userEmail",
+            "id": "userEmail",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        },
+        {
+            "name": "Activity Detail",
+            "type": "text",
+            "tableRef": "activityDetail",
+            "placeholder": "Enter activityDetail",
+            "id": "activityDetail",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitUsageLogs",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewUsageLogs"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewUsageLogs"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "UsageLogs/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "UsageLogs/getOne",
+        "params": "_id"
+    }
+
+}

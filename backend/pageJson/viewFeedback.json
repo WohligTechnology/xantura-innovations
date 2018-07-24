@@ -1,0 +1,55 @@
+{
+    "title": "Feedback",
+    "description": "List of Feedbacks",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "userEmail",
+            "isSort": "",
+            "tableRef": "userEmail"
+        }, {
+            "name": "Rating",
+            "isSort": "",
+            "tableRef": "rating"
+        },
+        {
+            "name": "Comment",
+            "isSort": "",
+            "tableRef": "comment"
+        }
+    ],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editFeedback",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Feedback",
+        "content": "Are you sure you want to delete Feedback?",
+        "api": "feedback/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [{
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createFeedback"
+    }],
+    "apiCall": {
+        "url": "Feedback/search",
+        "params": "_id"
+    }
+}

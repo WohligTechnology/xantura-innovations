@@ -1,0 +1,44 @@
+<div class="login">
+    <div class="container">
+        <div class="login-box">
+            <div class="text-center title">
+                <h4 class="text-uppercase">Login</h4>
+                <div class="subtitle">
+                    <p>The access is limited to TUI members as it holds ongoing internal projects.</p>
+                </div>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <div class="custom-form">
+                <form novalidate name="loginFormName" class="form-group" ng-submit="submitloginForm(loginForm,loginFormName.$valid);">
+                    <div class="form-spacing">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" ng-model="loginForm.username" class="form-control" id="username" placeholder="Please enter username" name="username"
+                                required>
+                            <div class="pull-right">
+                                <span class="label label-danger" ng-show="loginFormName.username.$invalid && loginFormName.username.$viewValue && loginFormName.username.$dirty">Please enter valid username</span>
+                                <span class="label label-danger" ng-show="loginBtnClicked  && loginFormName.username.$error.required">Please enter username</span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" ng-model="loginForm.password" class="form-control" id="password" placeholder="Please enter password"
+                                name="password" required>
+                            <div class="pull-right">
+                                <span class="label label-danger" ng-show="loginFormName.password.$invalid && loginFormName.password.$viewValue && loginFormName.password.$dirty">Please enter valid password</span>
+                                <span class="label label-danger" ng-show="loginBtnClicked  && loginFormName.password.$error.required">Please enter password</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-uppercase">
+                        <button type="submit" ng-disabled="apiCalling" class="btn btn-primary text-uppercase send" promise-btn>Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

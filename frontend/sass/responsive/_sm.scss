@@ -1,0 +1,66 @@
+/* Breakpoint for medium viewport */
+
+@include media-breakpoint-down(sm) {
+    p {
+        font-size: 16px !important;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    .login {
+        .login-box {
+            width: 85%;
+            .subtitle {
+                padding: 2px !important;
+            }
+            .custom-form {
+                padding: 20px !important;
+            }
+        }
+    }
+    .form-box {
+        width: 300px;
+        .subtitle {
+            padding: 2px;
+        }
+        .custom-form {
+            padding: 10px;
+        }
+    }
+    .form-box {
+        width: 300px;
+        .subtitle {
+            padding: 2px;
+        }
+        .custom-form {
+            padding: 10px;
+        }
+    }
+    .home {
+        .swiper-container {
+            .swiper-button-prev {
+                left: 5px;
+            }
+            .swiper-button-next {
+                right: 5px;
+            }
+            .slider-content {
+                bottom: 80px !important;
+                left: 30px;
+                text-content {
+                    width: 280px !important;
+                }
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .project-header {
+        padding-top: 19px !important;
+        .custom-button {
+            padding: 0.5rem;
+            font-size: 0.5rem;
+        }
+    }
+}

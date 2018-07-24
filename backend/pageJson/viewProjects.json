@@ -1,0 +1,81 @@
+{
+    "title": "Project",
+    "description": "List of Projects",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [
+        {
+            "name": "Name",
+            "isSort": "",
+            "tableRef": "name"
+        },
+        {
+            "name": "Type",
+            "isSort": "",
+            "tableRef": "type"
+        },{
+            "name": "Description",
+            "isSort": "",
+            "tableRef": "description"
+        }, {
+            "name": "Demo Link",
+            "isSort": "",
+            "tableRef": "demoLink"
+        },
+        {
+            "name": "Punch Line",
+            "isSort": "",
+            "tableRef": "punchLine"
+        }, 
+        {
+            "name": "Short Description",
+            "isSort": "",
+            "tableRef": "shortDescription"
+        },
+        {
+            "name": "featured",
+            "isSort": "",
+            "tableRef": "featured"
+        },
+        {
+            "name": "Banner Image",
+            "isSort": "",
+            "tableRef": "bannerImage",
+            "type":"image"
+        }
+    ],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editProjects",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Projects",
+        "content": "Are you sure you want to delete Projects?",
+        "api": "projects/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [{
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createProjects"
+    }],
+    "apiCall": {
+        "url": "Projects/search",
+        "params": "_id"
+    }
+}

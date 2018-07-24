@@ -1,0 +1,53 @@
+<div class="feedback">
+    <div class="container">
+        <div class="form-box">
+            <button type="button" class="close" ng-click="$dismiss();clearDataFeedback()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="text-center title">
+                <h4 class="text-uppercase">Feedback</h4>
+                <div class="subtitle">
+                    <p>A vision is like a dream - it will disappear unless we do something with it.
+                    </p>
+                </div>
+            </div>
+            <div class="custom-form">
+                <form novalidate name="feedbackFormName" class="form-group" ng-submit="submitfeedbackForm(feedbackForm,feedbackFormName.$valid,feedbackFormName.rating.$viewValue);">
+                    <div class="form-spacing">
+                        <div class="form-group rate">
+                            <label for="rating">Rating *</label>
+                            <br>
+                            <span uib-rating name="rating" ng-init="feedbackForm.rating=0" ng-model="feedbackForm.rating" max="5"></span>
+                            <div class="pull-right">
+                                <span class="label label-danger" ng-show="feedbackBtnClicked  && feedbackFormName.rating.$viewValue==0">Please share your rating</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail">Email *</label>
+                            <input type="email" ng-model="feedbackForm.userEmail" class="form-control" id="userEmail" placeholder="Please enter your email"
+                                name="userEmail" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required>
+                            <div class="pull-right">
+                                <span class="label label-danger" ng-show="feedbackFormName.userEmail.$invalid && feedbackFormName.userEmail.$viewValue && feedbackFormName.userEmail.$dirty">Please enter valid email</span>
+                                <span class="label label-danger" ng-show="feedbackBtnClicked  && feedbackFormName.userEmail.$error.required">Please enter your email</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment">Comments *</label>
+                            <textarea name="comment" ng-model="feedbackForm.comment" id="comment" placeholder="Please share some comments"
+                                rows="5" class="form-control" required></textarea>
+                            <div class="pull-right">
+                                <span class="label label-danger" ng-show="feedbackFormName.comment.$invalid && feedbackFormName.comment.$viewValue && feedbackFormName.comment.$dirty">Please share some comments</span>
+                                <span class="label label-danger" ng-show="feedbackBtnClicked  && feedbackFormName.comment.$error.required">Please share some comments</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="text-center text-uppercase">
+                        <button type="submit" ng-disabled="apiCalling" class="btn btn-primary text-uppercase send" promise-btn>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

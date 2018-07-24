@@ -1,0 +1,6 @@
+apps:
+  - script: "app.js"
+    name: "System Innovatives - 95"
+    watch: false
+    args: "--prod"
+    exec_mode: "cluster"

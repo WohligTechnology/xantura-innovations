@@ -1,0 +1,62 @@
+//LOGIN PAGE
+.login {
+    min-height: $body-height;
+    background-size: cover;
+    position: relative;
+    .login-box {
+        background: #fff;
+        margin: auto;
+        width: 680px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include prefixer(transform, translate(-50%, -50%), ("webkit", "moz"));
+        hr {
+            border: 0.6px solid $neavyblue;
+        }
+        .subtitle {
+            color: #898989;
+            p {
+                padding: 0 10px;
+                margin: 0;
+            }
+        }
+        .custom-form {
+            padding: 20px 80px;
+            input[type="email"] {
+                background: #ebebeb;
+            }
+            ::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                color: #898989;
+            }
+            ::-moz-placeholder {
+                /* Firefox 19+ */
+                color: #898989;
+            }
+            :-ms-input-placeholder {
+                /* IE 10+ */
+                color: #898989;
+            }
+            :-moz-placeholder {
+                /* Firefox 18- */
+                color: #898989;
+            }
+            .send {
+                margin: 20px 0px 0px;
+            }
+            .form-spacing {
+                margin-bottom: 2rem;
+            }
+        }
+        .title {
+            @extend .gray-bg;
+            padding: 25px 0px;
+        }
+    }
+}
+
+.login-bg {
+    background: url('../img/bg-login.jpg') no-repeat center center;
+    background-size: cover;
+}

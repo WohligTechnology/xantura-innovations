@@ -1,0 +1,120 @@
+{
+    "title": "Edit Projects",
+    "name": "Projects",
+    "jsonPage": "viewProjects",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [
+        {
+            "name": "Name",
+            "type": "text",
+            "tableRef": "name",
+            "placeholder": "Enter name",
+            "id": "name",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        },
+        {
+        "name": "Type",
+        "type": "tags",
+        "tableRef": "type",
+        "placeholder": "Enter type",
+        "id": "type",
+        "validation": ["", "trim", ""],
+        "url": "",
+        "dropDownField": "",
+        "dropDownType": "single",
+        "onView": true,
+        "dropDown": ["TUI Projects", "Innovative PoC","Potential PoC","More Innovations"]
+    },
+        {
+            "name": "Description",
+            "type": "text",
+            "tableRef": "description",
+            "placeholder": "Enter description",
+            "id": "description",
+            "url": ""
+        },
+        {
+            "name": "Demo Link",
+            "type": "text",
+            "tableRef": "demoLink",
+            "placeholder": "Enter demoLink",
+            "id": "demoLink",
+            "url": ""
+        },
+        {
+            "name": "Punch Line",
+            "type": "text",
+            "tableRef": "punchLine",
+            "placeholder": "punchLine",
+            "id": "punchLine",
+            "url": ""
+        },
+        {
+            "name": "Short Description",
+            "type": "text",
+            "tableRef": "shortDescription",
+            "placeholder": "shortDescription",
+            "id": "shortDescription",
+            "url": ""
+        },
+        {
+            "name": "Featured",
+            "type": "checkbox",
+            "tableRef": "featured",
+            "placeholder": "featured",
+            "id": "featured",
+            "url": ""
+        },
+        {
+        "name": "Banner Image",
+        "type": "image",
+        "tableRef": "bannerImage",
+        "size": "253 x 253",
+        "placeholder": "Upload bannerImage",
+        "id": "bannerImage",
+        "view": true,
+        "disabled": true,
+        "url": ""
+    },
+    {
+            "name": "Details",
+            "isSort": "",
+            "tableRef": "details",
+            "type": "textarea",
+            "placeholder": "Enter name",
+            "id": "details",
+            "url": ""
+        }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitProjects",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewProjects"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewProjects"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Projects/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Projects/getOne",
+        "params": "_id"
+    }
+
+}

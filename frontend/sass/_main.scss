@@ -1,0 +1,531 @@
+/* Bootstrap Variables Goes Here */
+
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+// Start with assigning color names to specific hex values.
+/* Secondary colours */
+
+$tui-red: rgb(212, 14, 20);
+$tui-blue: rgb(112, 203, 244);
+$tui-blue-25: rgb(194, 230, 250);
+$tui-blue-15: rgb(226, 243, 254);
+$tui-dark-blue: rgb(9, 42, 94);
+$tui-white: rgb(255, 255, 255);
+$gray-text: #878787;
+/* Secondary colours */
+
+$tui-green: rgb(170, 215, 0);
+$tui-yellow: rgb(255, 225, 0);
+/* Achromatic colours */
+
+$tui-beige: rgb(215, 210, 195);
+$tui-beige-50: rgb(231, 227, 219);
+$tui-beige-25: rgb(243, 240, 236);
+$tui-grey: rgb(115, 115, 115);
+$tui-grey-50: rgb(185, 185, 185);
+$tui-grey-25: rgb(220, 220, 220);
+$tui-black: rgb(0, 0, 0);
+/* Bootstrap Colours */
+
+$blue: #022b63 !default;
+$green: $tui-green !default;
+$yellow: $tui-yellow !default;
+$red: $tui-red !default;
+$cyan: $tui-blue !default;
+/* Sweet Alert */
+
+$swal2-success: $green !default;
+$swal2-error: $red !default;
+$swal2-warning: $yellow !default;
+$swal2-info: $cyan !default;
+$swal2-question: $cyan !default;
+$swal2-confirm-button-background-color: $blue !default;
+/* Button */
+
+$btn-default-color: $tui-dark-blue !default;
+$btn-default-bg: $tui-grey-25 !default;
+$btn-default-border: $tui-grey-25 !default;
+/* Others */
+
+$white: #fff !default;
+$black: #000 !default;
+$orange: #f0ad4e !default;
+$teal: #5bc0de !default;
+$pink: #ff5b77 !default;
+$purple: #613d7c !default;
+$neavyblue: #022b63;
+// Create grayscale
+$gray-dark: #292b2c !default;
+$gray: #464a4c !default;
+$gray-light: #636c72 !default;
+$gray-lighter: #eceeef !default;
+$gray-lightest: #f4f4f4 !default;
+// Reassign color vars to semantic color scheme
+$brand-primary: $blue !default;
+$brand-success: $green !default;
+$brand-info: $teal !default;
+$brand-warning: $orange !default;
+$brand-danger: $red !default;
+$brand-inverse: $gray-dark !default;
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$enable-transitions: true !default;
+$enable-hover-media-query: false !default;
+$enable-grid-classes: true !default;
+$enable-print-styles: true !default;
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+$spacer: 1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+// Style anchor elements.
+$link-color: $brand-primary !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: "TUITypeLt",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-family-serif: "TUITypeLt",
+Georgia,
+"Times New Roman",
+Times,
+serif !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: 1.25rem !default;
+$font-size-sm: .875rem !default;
+$font-size-xs: .75rem !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+$font-size-h1: 2.5rem !default;
+$font-size-h2: 2rem !default;
+$font-size-h3: 1.75rem !default;
+$font-size-h4: 1.5rem !default;
+$font-size-h5: 1.25rem !default;
+$font-size-h6: 1rem !default;
+$headings-margin-bottom: ($spacer / 2) !default;
+$headings-font-family: inherit !default;
+$headings-line-height: 1.1 !default;
+$headings-color: inherit !default;
+$headings-font-weight: 700 !default;
+$Merri: Merriweather_Italic;
+// Components
+//
+// Define common padding and border radius sizes and more.
+$line-height-lg: (4 / 3) !default;
+$line-height-sm: 1.5 !default;
+$border-radius: .25rem !default;
+$border-radius-lg: .3rem !default;
+$border-radius-sm: .2rem !default;
+$component-active-color: $white !default;
+$component-active-bg: $brand-primary !default;
+$caret-width: .3em !default;
+$transition-base: all .2s ease-in-out !default;
+$transition-fade: opacity .15s linear !default;
+$transition-collapse: height .35s ease !default;
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+$btn-padding-x: 1rem !default;
+$btn-padding-y: .5rem !default;
+$btn-line-height: 1.25 !default;
+$btn-font-weight: $font-weight-normal !default;
+$btn-box-shadow: inset 0 1px 0 rgba($white, .15),
+0 1px 1px rgba($black, .075) !default;
+$btn-focus-box-shadow: 0 0 0 2px rgba($brand-primary, .25) !default;
+$btn-active-box-shadow: inset 0 3px 5px rgba($black, .125) !default;
+// Forms
+$input-padding-x: .75rem !default;
+$input-padding-y: .5rem !default;
+$input-line-height: 1.25 !default;
+$input-bg: $white !default;
+$input-bg-disabled: $gray-lighter !default;
+$input-color: $gray !default;
+// Dropdowns
+//
+// Dropdown menu container and contents.
+$dropdown-min-width: 10rem !default;
+$dropdown-padding-y: .5rem !default;
+$dropdown-margin-top: .125rem !default;
+$dropdown-bg: $white !default;
+$dropdown-border-color: rgba($black, .15) !default;
+$dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
+// @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../bower_components/bootstrap/scss/bootstrap";
+@import "other/font-fix";
+$header-height: 65px;
+$footer-height: 38px;
+$body-height: calc(100vh - #{$header-height+$footer-height});
+body {
+    padding-top: $header-height;
+}
+
+.footer {
+    height: $footer-height;
+}
+
+@font-face {
+    font-family: Merriweather_Italic;
+    src: url("../fonts/Merriweather-Italic.ttf");
+}
+
+img.loading {
+    text-align: center;
+    opacity: 1;
+    width: 32px !important;
+    height: auto;
+}
+
+img {
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+img.doneLoading {
+    opacity: 1;
+}
+
+nav li:hover .dropdown-menu {
+    display: block;
+}
+
+#map img {
+    opacity: 1;
+}
+
+a,
+.btn,
+[ui-sref] {
+    cursor: pointer;
+    transition: all ease 300ms;
+}
+
+footer {
+    font-size: 12px;
+    background-color: #d4d4d4;
+    padding: 10px 0;
+    p {
+        margin: 0;
+    }
+}
+
+//bootstrap forms
+.input-lg,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-addon,
+.input-group-lg>.input-group-btn>.btn,
+.btn,
+.form-control {
+    // border-radius: 0;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: $brand-primary;
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-invalid {
+    color: $brand-danger;
+    .form-control {
+        border-color: $brand-danger;
+        color: $brand-danger;
+        &::-webkit-input-placeholder {
+            color: $brand-danger;
+        }
+    }
+}
+
+.form-submission {
+    min-height: 300px;
+}
+
+//FLEX SLIDER FIXES
+.flex-direction-nav {
+    a {
+        height: auto;
+    }
+    .flex-prev {
+        left: 10px !important;
+    }
+    .flex-next {
+        right: 10px !important;
+    }
+}
+
+.content {
+    min-height: 450px;
+}
+
+.img-full {
+    width: 100%;
+    display: block;
+}
+
+header {
+    transition: all 300ms ease;
+}
+
+.nav-up {
+    transform: translateY(-100%);
+}
+
+.gray-bg {
+    background: $gray-lightest;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $neavyblue;
+}
+
+label {
+    color: $neavyblue;
+}
+
+p {
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    margin-bottom: 0.3rem;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.btn-outline-primary {
+    border-radius: 13px !important;
+    font-size: 14px;
+    margin: 0px 6px 15px;
+}
+
+.label-danger {
+    color: $red;
+}
+
+.font-Merri {
+    font-family: $Merri;
+}
+
+button {
+    -webkit-font-smoothing: antialiased;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+//HEADER
+header {
+    background: $white;
+    .custom-header {
+        background: $white;
+        height: 65px;
+        padding-top: 10px;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+        padding-bottom: 10px;
+        overflow: hidden;
+        .line-gradient {
+            background: linear-gradient(to right, $red 0%, $red 50%, $blue 50%, $blue 100%);
+            height: 3px;
+            position: relative;
+            margin-top: 25px;
+            .logo-tui {
+                margin: auto;
+                top: 0;
+                transform: translate(-50%, -48%);
+                position: absolute;
+                left: 0px;
+            }
+            .logo-innovatives {
+                margin: auto;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                position: absolute;
+            }
+            .logo-systemplus {
+                margin: auto;
+                transform: translate(0%, -30%);
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+}
+
+.wdh {
+    width: 100%;
+}
+
+.pull-right {
+    float: right
+}
+
+.pull-left {
+    float: left;
+}
+
+//FOOTER
+.custom-footer {
+    p {
+        color: $blue;
+        font-size: 12px;
+        a {
+            color: $blue;
+        }
+    }
+}
+
+.modal-content {
+    background-color: transparent;
+}
+
+.close {
+    padding: 5px 10px 0px !important;
+}
+
+.form-box {
+    background: #fff;
+    margin: auto;
+    width: 680px;
+    position: absolute;
+    left: 50%;
+    margin: 2% 0% 5%;
+    @include prefixer(transform,
+    translateX(-50%),
+    ("webkit", "moz"));
+    hr {
+        border: 0.6px solid $neavyblue;
+    }
+    .subtitle {
+        color: #898989;
+        -webkit-font-smoothing: antialiased;
+        margin-top: 10px;
+        p {
+            margin: 0;
+        }
+    }
+    .custom-form {
+        padding: 20px 80px;
+        input {
+            background: #ebebeb;
+        }
+        ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #898989;
+        }
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #898989;
+        }
+        :-ms-input-placeholder {
+            /* IE 10+ */
+            color: #898989;
+        }
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: #898989;
+        }
+        .send {
+            margin: 20px 0px 0px;
+        }
+        textarea {
+            background: #ebebeb;
+            resize: none;
+        }
+        .form-spacing {
+            margin-bottom: 2rem;
+        }
+    }
+    .title {
+        @extend .gray-bg;
+        padding: 25px 20px;
+        h4 {
+            margin: 0;
+            font-size: 22px;
+        }
+    }
+}
+
+.innovatives {
+    color: $blue;
+    font-weight: bold;
+    span {
+        color: $red;
+    }
+}
+
+.project-header {
+    padding-top: 14px !important;
+}
+
+//MEDIA QUERY
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+    .login {
+        padding: 30px;
+        .login-box {
+            width: 450px !important;
+            position: static !important;
+            top: 0 !important;
+            left: 0 !important;
+            transform: none !important;
+        }
+    }
+    .content {
+        min-height: 0px;
+    }
+    .home {
+        .swiper-container {
+            .home-slider {
+                height: 82vh !important;
+            }
+            .slider-content {
+                position: absolute;
+                bottom: 30px;
+            }
+        }
+    }
+    .project .bg-project {
+        height: 82vh !important;
+    }
+    .project-header {
+        padding-top: 19px !important;
+        .custom-button {
+            padding: 0.5rem;
+            font-size: 0.5rem;
+        }
+    }
+}
+
+.block {
+    min-height: 200px;
+}
