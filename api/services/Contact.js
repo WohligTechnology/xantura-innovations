@@ -43,13 +43,7 @@ var model = {
                     emailData.a = false;
                     console.log("data: ", data);
                     emailData.email = [{
-                        "email": "tushar.sachde@sptr.co"
-                    }, {
                         "email": "tushar@wohlig.com"
-                    }, {
-                        "email": "anand@sptr.co"
-                    }, {
-                        "email": "vivek@sptr.co"
                     }];
                     emailData.name = data.name;
 
@@ -62,7 +56,7 @@ var model = {
                     emailData.comments = data.comments;
                     emailData.from = data.userEmail;
                     emailData.filename = "contactUs.ejs";
-                    emailData.subject = "Innovatives - Meeting Requested";
+                    emailData.subject = "Xantura Innovations - Meeting Requested";
                     emailData._id = complete._id;
                     console.log("emaildata", emailData);
 

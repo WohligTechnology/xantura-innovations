@@ -38,10 +38,10 @@ myApp.controller('HomeCtrl', function ($rootScope, $scope, TemplateService, Navi
     };
 
     $scope.projectType = [{
-            type: 'TUI Solutions',
-            id: "TUI Projects"
+            type: 'Xantura Solutions',
+            id: "Xantura Projects"
         }, {
-            type: 'TUI Innovative Pilots',
+            type: 'Xantura Innovative Pilots',
             id: "Innovative PoC"
         },
         // {

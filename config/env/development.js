@@ -21,7 +21,7 @@ module.exports = {
     //   connection: 'someMongodbServer'
     // }
     port: 1337,
-    // realHost: "http://wohlig.io:1337",
-    realHost: "https:/innovatives.sptr.co",
-    emails: ["chintan@wohlig.com", "jagruti@wohlig.com", "tushar@wohlig.com", "chirag@wohlig.com", "harsh@wohlig.com", "sohan@wohlig.com", "sayali.ghule@wohlig.com"]
+    realHost: "http://wohlig.io:1337",
+    // realHost: "https:/xantura.sptr.co",
+    emails: ["chintan@wohlig.com", "jagruti@wohlig.com", "tushar@wohlig.com", "chirag@wohlig.com", "harsh@wohlig.com", "sohan@wohlig.com"]
 };

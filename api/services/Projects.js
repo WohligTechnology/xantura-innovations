@@ -4,8 +4,8 @@ var schema = new Schema({
     },
     type: {
         type: String,
-        enum: ["TUI Projects", "Innovative PoC", "Potential PoC", "More Innovations"],
-        default: 'TUI Projects'
+        enum: ["Xantura Projects", "Innovative PoC", "Potential PoC", "More Innovations"],
+        default: 'Xantura Projects'
     },
     description: {
         type: String
@@ -116,20 +116,14 @@ var model = {
                     var emailData = {};
                     console.log("data: ", data);
                     emailData.email = [{
-                        "email": "tushar.sachde@sptr.co"
-                    }, {
                         "email": "tushar@wohlig.com"
-                    }, {
-                        "email": "anand@sptr.co"
-                    }, {
-                        "email": "vivek@sptr.co"
                     }];
                     emailData.projectName = data.project.projectName;
                     emailData.name = data.project.name;
                     emailData.number = data.project.number;
                     emailData.from = data.project.userEmail;
                     emailData.filename = "demorequest.ejs";
-                    emailData.subject = "Innovatives - Demo Requested";
+                    emailData.subject = "Xantura Innovations - Demo Requested";
                     emailData._id = foundObj._id;
 
                     Config.email(emailData, function (err, emailRespo) {

@@ -26,8 +26,8 @@ module.exports = {
    ***************************************************************************/
 
   port: 95,
-  realHost: "https://innovatives.sptr.co",
-  emails: ["chintan@wohlig.com", "jagruti@wohlig.com", "tushar@wohlig.com", "chirag@wohlig.com", "harsh@wohlig.com", "sohan@wohlig.com", "sayali.ghule@wohlig.com"]
+  realHost: "https://xantura.sptr.co",
+  emails: ["chintan@wohlig.com", "jagruti@wohlig.com", "tushar@wohlig.com", "chirag@wohlig.com", "harsh@wohlig.com", "sohan@wohlig.com"]
 
   /***************************************************************************
    * Set the log level in production environment to "silent"                 *

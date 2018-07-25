@@ -1,12 +1,12 @@
 {
-    "title": "Create Projects",
+    "title": "New Project",
     "name": "Projects",
     "jsonPage": "viewProjects",
     "desciption": "",
     "pageType": "create",
     "urlFields": ["Projects"],
     "fields": [{
-            "name": "Name",
+            "name": "Project Name",
             "type": "text",
             "tableRef": "name",
             "placeholder": "Enter name",
@@ -14,24 +14,16 @@
             "url": ""
         },
         {
-            "name": "Type",
+            "name": "Project Type",
             "type": "tags",
             "tableRef": "type",
-            "placeholder": "select type",
+            "placeholder": "Select Type",
             "id": "type",
             "url": "",
             "dropDownField": "",
             "dropDownType": "single",
             "onView": true,
-            "dropDown": ["TUI Projects", "Innovative PoC", "Potential PoC", "More Innovations"]
-        },
-        {
-            "name": "Description",
-            "type": "text",
-            "tableRef": "description",
-            "placeholder": "Enter description",
-            "id": "description",
-            "url": ""
+            "dropDown": ["Xantura Projects", "Innovative PoC", "Potential PoC", "More Innovations"]
         },
         {
             "name": "Demo Link",
@@ -69,7 +61,7 @@
             "name": "Banner Image",
             "type": "image",
             "tableRef": "bannerImage",
-            "size": "253 x 253",
+            "size": "1600 x 415",
             "placeholder": "Upload bannerImage",
             "id": "bannerImage",
             "view": true,

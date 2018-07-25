@@ -1,40 +1,29 @@
 {
-    "title": "Edit Projects",
+    "title": "Edit Project",
     "name": "Projects",
     "jsonPage": "viewProjects",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
-    "fields": [
-        {
-            "name": "Name",
+    "fields": [{
+            "name": "Project Name",
             "type": "text",
             "tableRef": "name",
             "placeholder": "Enter name",
             "id": "name",
-            "validation": ["", "trim", "unique"],
             "url": ""
         },
         {
-        "name": "Type",
-        "type": "tags",
-        "tableRef": "type",
-        "placeholder": "Enter type",
-        "id": "type",
-        "validation": ["", "trim", ""],
-        "url": "",
-        "dropDownField": "",
-        "dropDownType": "single",
-        "onView": true,
-        "dropDown": ["TUI Projects", "Innovative PoC","Potential PoC","More Innovations"]
-    },
-        {
-            "name": "Description",
-            "type": "text",
-            "tableRef": "description",
-            "placeholder": "Enter description",
-            "id": "description",
-            "url": ""
+            "name": "Project Type",
+            "type": "tags",
+            "tableRef": "type",
+            "placeholder": "Select Type",
+            "id": "type",
+            "url": "",
+            "dropDownField": "",
+            "dropDownType": "single",
+            "onView": true,
+            "dropDown": ["Xantura Projects", "Innovative PoC", "Potential PoC", "More Innovations"]
         },
         {
             "name": "Demo Link",
@@ -69,17 +58,17 @@
             "url": ""
         },
         {
-        "name": "Banner Image",
-        "type": "image",
-        "tableRef": "bannerImage",
-        "size": "253 x 253",
-        "placeholder": "Upload bannerImage",
-        "id": "bannerImage",
-        "view": true,
-        "disabled": true,
-        "url": ""
-    },
-    {
+            "name": "Banner Image",
+            "type": "image",
+            "tableRef": "bannerImage",
+            "size": "1600 x 415",
+            "placeholder": "Upload bannerImage",
+            "id": "bannerImage",
+            "view": true,
+            "disabled": true,
+            "url": ""
+        },
+        {
             "name": "Details",
             "isSort": "",
             "tableRef": "details",
