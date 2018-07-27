@@ -33,7 +33,7 @@
         }
     }
     .block {
-        margin: 40px 0px 100px;
+        padding: 40px 0px;
         .table {
             max-width: 600px;
             margin: 15px auto 0;
@@ -46,17 +46,20 @@
             }
         }
         hr {
-            background: url(../img/hr.svg) no-repeat;
+            background-color: #eaf2f5;
             display: block;
-            height: 15px;
-            background-position: center center;
+            height: 5px;
+            margin: 20px -15px;
             border: 0;
-            background-size: contain;
-            margin: 20px auto;
         }
-    }
-    .marco-content {
-        margin-bottom: 20px;
+        p {
+            margin: 0;
+        }
+        h4, .h4 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #1b1b1b;
+        }
     }
 }
 
@@ -76,5 +79,16 @@
     }
     &.table-striped tbody tr:nth-of-type(odd) {
         background-color: rgba(255, 255, 255, 0.45);
+    }
+}
+
+.box-content {
+    background-color: white;
+    padding: 30px 15px;
+}
+
+.marco-content {
+    h4 {
+        margin-bottom: 15px;
     }
 }

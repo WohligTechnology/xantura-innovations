@@ -1,12 +1,17 @@
-<header class="fixed-top" ui-sref="app.home">
-    <div class="logo">
-        <img src="img/xantura.svg" class="logo-1" alt="Xantura">
-        <img src="img/systemsplus.svg" class="logo-2" alt="Systems Plus">
-    </div>
-    <div class="display-inline">
-        <p>"A vision is like a dream - it will disappear unless we do something with it."</p>
-        <button type="button" class="btn btn-primary text-uppercase discuss-btn" ng-click="openContact();">
-            Let's Discuss
-        </button>
+<header class="fixed-top">
+    <div class="container">
+        <div class="pull-right d-none d-sm-block" ng-if="currentState != 'login'">
+            <p class="text-left">
+                <span class="font-Merri"></span>
+                <button type="button" class="btn btn-danger text-uppercase discuss-btn right-margin" ng-click="openContact();">
+                    Let's Discuss
+                </button>
+            </p>
+        </div>
+
+        <div class="logo white-bg" ui-sref="app.home">
+            <div class="logo-1 logo-holder"><img src="img/xantura.svg" alt="Xantura"></div>
+            <div class="logo-2 logo-holder"><img src="img/systemsplus.svg" alt="Systems Plus"></div>
+        </div>
     </div>
 </header>

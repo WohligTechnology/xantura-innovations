@@ -9,11 +9,15 @@
                     <div class="slider-content container text-left">
                         <div class="text-content">
                             <h4 class="text-uppercase">{{s.name}}</h4>
-                            <p>{{s.shortDescription}}</p>
-                            <a class="mr-3 inline pointer" ui-sref="app.project({id:s._id})">Learn More »</i>
-                            </a>
-                            <a class="inline" ng-if="s.demoLink && s.demoLink!='nolink'" ui-sref="app.project-demo({url: s.demoLink})" ng-click="gaViewDemo(s.name)">View Demo »</i>
-                            </a>
+                            <div class="subline-box">
+                                <p>{{s.shortDescription}}</p>
+                                <div class="text-right">
+                                    <a class="btn btn-success btn-sm mr-2 inline pointer" ui-sref="app.project({id:s._id})">Learn More</a>
+                                    <a class="btn btn-success btn-sm inline" ng-if="s.demoLink && s.demoLink!='nolink'" ui-sref="app.project-demo({url: s.demoLink})"
+                                        ng-click="gaViewDemo(s.name)">View Demo</a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -24,31 +28,19 @@
         </div>
     </div>
 
-    <!-- DISCUSS NOW -->
-    <div class="container">
-        <div class="discuss-now text-center">
-            <p class="font-Merri mr-3 inline">"A vision is like a dream - it will disappear unless we do something with it."
-            </p>
-            <span class="inline">
-                <button type="submit" class="btn btn-primary text-uppercase discuss-btn" ng-click="openContact()">
-                    Let's Discuss
-                </button>
-            </span>
-        </div>
-    </div>
-
     <!-- OUTCOMES AND EXPERIENCES -->
     <div class="outnexp">
         <div class="container">
-            <div class="title text-uppercase text-center">
-                <h4 class="background">
-                    <span>OUTCOMES &amp; EXPERIENCES</span>
+            <div class="text-center">
+                <h4 class="background title text-uppercase">
+                    <span>Outcomes &amp; Experiences</span>
                 </h4>
+                <p class="sub-title font-Merri">"A vision is like a dream - it will disappear unless we do something with it."</p>
             </div>
 
             <!-- Tabs -->
-            <div class="text-center">
-                <button class="btn btn-outline-primary text-uppercase" ng-repeat="p in projectType" ng-click="clickType(p.id)" ng-class="{'blue':selected==p.id}">{{p.type}}</button>
+            <div class="text-center  mb-4">
+                <button class="btn btn-outline-success grp-btn text-uppercase" ng-repeat="p in projectType" ng-click="clickType(p.id)" ng-class="{'blue':selected==p.id}">{{p.type}}</button>
             </div>
             <!-- Images -->
             <div class="row block">
@@ -65,9 +57,9 @@
                                 </h4>
                                 <p>{{x.shortDescription}}</p>
                                 <!--<a class="btn btn-primary btn-sm btn-block" ng-if="x.demoLink" ng-href="{{x.demoLink}}" target="_blank">View Demo</a>-->
-                                <a class="btn btn-primary btn-sm btn-block" ng-if="x.demoLink && x.demoLink!='nolink'" ui-sref="app.project-demo({url: x.demoLink})"
+                                <a class="btn btn-success btn-sm btn-block" ng-if="x.demoLink && x.demoLink!='nolink'" ui-sref="app.project-demo({url: x.demoLink})"
                                     ng-click="gaVideoDemo(x.name)">View Demo</a>
-                                <a class="btn btn-secondary btn-sm btn-block" ng-if="!x.demoLink || x.demoLink=='nolink'" ui-sref="app.project({id: x._id})">Learn More</a>
+                                <a class="btn btn-warning btn-sm btn-block" ng-if="!x.demoLink || x.demoLink=='nolink'" ui-sref="app.project({id: x._id})">Learn More</a>
                             </div>
                         </div>
                     </div>

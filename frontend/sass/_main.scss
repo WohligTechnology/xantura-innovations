@@ -1,7 +1,7 @@
 $blue: #323141 !default;
 $cyan: #0099cc !default;
-$green: #629bd3 !default;
-// $yellow: $tui-yellow !default;
+$green: #4387cc !default;
+$yellow: #659fd8 !default;
 $red: #b12e64 !default;
 /* Sweet Alert */
 
@@ -30,7 +30,7 @@ $gray-lightest: #f4f4f4 !default;
 $brand-primary: $blue !default;
 $brand-success: $green !default;
 $brand-info: $teal !default;
-$brand-warning: $orange !default;
+$brand-warning: $yellow !default;
 $brand-danger: $red !default;
 $brand-inverse: $gray-dark !default;
 // Options
@@ -134,11 +134,13 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../bower_components/bootstrap/scss/bootstrap";
 @import "other/font-fix";
-$header-height: 65px;
+$header-height: 59px;
 $footer-height: 38px;
 $body-height: calc(100vh - #{$header-height+$footer-height});
 body {
     padding-top: $header-height;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .footer {
@@ -187,6 +189,7 @@ footer {
     p {
         margin: 0;
         color: white;
+        font-size: 14px;
     }
 }
 
@@ -248,10 +251,6 @@ footer {
     display: block;
 }
 
-header {
-    transition: all 300ms ease;
-}
-
 .nav-up {
     transform: translateY(-100%);
 }
@@ -282,10 +281,9 @@ a {
     text-decoration: none !important;
 }
 
-.btn-outline-primary {
-    border-radius: 13px !important;
-    font-size: 14px;
-    margin: 0px 6px 15px;
+.grp-btn {
+    font-size: 12px;
+    margin: 0px 6px 5px;
 }
 
 .label-danger {
@@ -298,6 +296,7 @@ a {
 
 button {
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .inline {
@@ -310,13 +309,21 @@ button {
 
 .logo {
     img {
-        height: 40px;
+        width: auto;
+        height: 100%;
+    }
+    .logo-holder {
+        height: 56px;
+        display: inline-block;
+        vertical-align: middle;
     }
 }
 
 //HEADER
 header {
-    background: $white;
+    transition: all 300ms ease;
+    border-top: 3px solid $blue;
+    background: linear-gradient(to right, $blue 0%, $blue 50%, #fff 50%, #fff 100%);
     .custom-header {
         background: $white;
         height: 65px;
@@ -364,7 +371,7 @@ header {
     float: left;
 }
 
-//FOOTER
+//FOOTER 
 .custom-footer {
     p {
         a {
@@ -398,6 +405,7 @@ header {
         color: #898989;
         -webkit-font-smoothing: antialiased;
         margin-top: 10px;
+        font-family: $Merri;
         p {
             margin: 0;
         }
@@ -496,4 +504,26 @@ header {
 
 .block {
     min-height: 200px;
+}
+
+.light-primary {
+    background-color: #eaf2f5;
+}
+
+.logo-1 {
+    background-color: $brand-primary;
+    padding: 15px 20px;
+    margin-right: 5px;
+}
+
+.logo-2 {
+    padding: 5px;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.modal-content {
+    border: none;
 }
