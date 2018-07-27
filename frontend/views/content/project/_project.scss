@@ -3,9 +3,6 @@
     .modal-content {
         background: transparent;
     }
-    button {
-        border-radius: 4px;
-    }
     .bg-project {
         height: 45vh;
         background-size: cover !important;
@@ -66,13 +63,10 @@
 .table {
     thead {
         &.thead-info {
-            background-color: $tui-blue;
             color: white;
         }
     }
-    &.table-striped {
-        color: $tui-dark-blue;
-    }
+    &.table-striped {}
 }
 
 .table-info {

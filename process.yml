@@ -1,6 +1,6 @@
 apps:
   - script: "app.js"
-    name: "System Innovatives - 95"
+    name: "Xantura Innovations"
     watch: false
     args: "--prod"
     exec_mode: "cluster"

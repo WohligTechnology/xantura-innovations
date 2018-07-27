@@ -1,0 +1,18 @@
+{
+  "apps": [{
+      "name": "Server",
+      "script": "./app.js",
+      "watch": true
+    },
+    {
+      "name": "Backend",
+      "script": "grunt ui --target=backend",
+      "watch": true
+    },
+    {
+      "name": "Frontend",
+      "script": "grunt ui --target=frontend",
+      "watch": true
+    }
+  ]
+}

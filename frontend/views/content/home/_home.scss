@@ -1,6 +1,6 @@
 .home {
     .blue {
-        background-color: #022b63;
+        background-color: $blue;
         color: white
     }
     .swiper-container {
@@ -80,10 +80,6 @@
     }
     .discuss-now {
         padding: 15px 0px;
-        color: $gray-text;
-        .discuss-btn {
-            border-radius: 4px;
-        }
     }
 }
 

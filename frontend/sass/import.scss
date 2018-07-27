@@ -8,8 +8,6 @@
 @import "../../bower_components/ui-bootstrap4/docs/ui-bootstrap-csp";
 /****** Please Import Libraries Above This!!!!!! ******/
 
-@import "other/tui-fonts";
-@import "other/tui-icons";
 @import "main";
 @import "../../bower_components/sweetalert2/src/sweetalert2";
 @import "../views/content/home/_home.scss";
@@ -23,3 +21,4 @@
 @import "responsive/md";
 @import "responsive/sm";
 @import "responsive/xs";
+@import url('https://fonts.googleapis.com/css?family=Lato');
