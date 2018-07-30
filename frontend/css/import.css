@@ -9277,11 +9277,11 @@ body.swal2-no-backdrop .swal2-shown {
   font-size: 18px; }
 
 .text p {
-  font-size: 16px;
+  font-size: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  line-height: 120%;
+  line-height: 140%;
   /* fallback */
   height: 60px;
   /* fallback */

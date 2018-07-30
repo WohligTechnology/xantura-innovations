@@ -68,7 +68,7 @@ myApp.controller('HomeCtrl', function ($rootScope, $scope, TemplateService, Navi
                 if ($rootScope.projectId) {
                     $scope.clickType($rootScope.projectId);
                 } else {
-                    $scope.clickType($scope.projectType[0].id);
+                    $scope.clickType($scope.projectType[1].id);
                 }
 
                 $rootScope.$on('$stateChangeSuccess',
