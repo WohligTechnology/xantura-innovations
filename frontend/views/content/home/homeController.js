@@ -45,7 +45,7 @@ myApp.controller('HomeCtrl', function ($rootScope, $scope, TemplateService, Navi
             id: "Innovative PoC"
         },
         // {
-        //     type: 'TUI Potential Pilots',
+        //     type: 'Xantura Potential Pilots',
         //     id: "Potential Poc"
         // },
         {
