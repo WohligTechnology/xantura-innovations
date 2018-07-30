@@ -37,11 +37,18 @@
                 color: $white;
                 background-color: transparentize($blue, 0.10);
                 width: auto;
-                display: inline-block; 
+                display: inline-block;
             }
             .subline-box {
                 background-color: transparentize(white, 0.10);
                 padding: 10px;
+                p {
+                    text-align: justify;
+                    font-size: 14px;
+                }
+                .btn+.btn {
+                    margin-left: .5rem;
+                }
             }
             .text-content {
                 width: 350px;

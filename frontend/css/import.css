@@ -9238,6 +9238,11 @@ body.swal2-no-backdrop .swal2-shown {
     .home .swiper-container .slider-content .subline-box {
       background-color: rgba(255, 255, 255, 0.9);
       padding: 10px; }
+      .home .swiper-container .slider-content .subline-box p {
+        text-align: justify;
+        font-size: 14px; }
+      .home .swiper-container .slider-content .subline-box .btn + .btn {
+        margin-left: .5rem; }
     .home .swiper-container .slider-content .text-content {
       width: 350px; }
 

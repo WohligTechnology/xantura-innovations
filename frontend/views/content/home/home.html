@@ -12,7 +12,7 @@
                             <div class="subline-box">
                                 <p>{{s.shortDescription}}</p>
                                 <div class="text-right">
-                                    <a class="btn btn-success btn-sm mr-2 inline pointer" ui-sref="app.project({id:s._id})">Learn More</a>
+                                    <a class="btn btn-success btn-sm inline pointer" ui-sref="app.project({id:s._id})">Learn More</a>
                                     <a class="btn btn-success btn-sm inline" ng-if="s.demoLink && s.demoLink!='nolink'" ui-sref="app.project-demo({url: s.demoLink})"
                                         ng-click="gaViewDemo(s.name)">View Demo</a>
                                 </div>
