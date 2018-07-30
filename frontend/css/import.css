@@ -9531,10 +9531,8 @@ body.swal2-no-backdrop .swal2-shown {
   .home .swiper-container .slider-content {
     bottom: 80px !important;
     left: 30px; }
-    .home .swiper-container .slider-content text-content {
+    .home .swiper-container .slider-content .text-content {
       width: 280px !important; }
-    .home .swiper-container .slider-content p {
-      margin-bottom: 0; }
   .project-header {
     padding-top: 19px !important; }
     .project-header .custom-button {
@@ -9556,4 +9554,6 @@ body.swal2-no-backdrop .swal2-shown {
     width: 50%;
     margin: 0 !important;
     text-align: center;
-    float: left; } }
+    float: left; }
+  .logo-1 {
+    padding: 15px 0px; } }
