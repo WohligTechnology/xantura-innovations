@@ -9502,8 +9502,6 @@ body.swal2-no-backdrop .swal2-shown {
 /* Breakpoint for medium viewport */
 /* Breakpoint for medium viewport */
 @media (max-width: 767.98px) {
-  p {
-    font-size: 16px !important; }
   h4 {
     font-size: 1.2rem; }
   .login .login-box {
