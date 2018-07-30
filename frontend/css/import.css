@@ -9189,10 +9189,11 @@ header {
       font-size: 22px; }
 
 .innovatives {
-  color: #323141;
-  font-weight: bold; }
+  color: #b12e64;
+  font-weight: bold;
+  font-size: 22px; }
   .innovatives span {
-    color: #b12e64; }
+    color: #323141; }
 
 .project-header {
   padding-top: 14px !important; }
