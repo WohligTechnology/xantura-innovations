@@ -9209,6 +9209,7 @@ body.swal2-no-backdrop .swal2-shown {
   width: 100%;
   height: 100%; }
   .home .swiper-container .home-slider {
+    min-height: 380px;
     height: 45vh;
     background-size: cover !important;
     background-position: center center !important;
