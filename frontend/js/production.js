@@ -88657,7 +88657,7 @@ myApp.controller('LoginCtrl', function ($scope, TemplateService, NavigationServi
             $scope.apiCalling = true;
             $scope.email = data.email;
             $scope.data = {};
-            $scope.data.username = data.username;
+            $scope.data.username = data.username.toLowerCase();
             $scope.data.password = data.password;
             NavigationService.callApiWithData('User/sendAccess', $scope.data, function (data) {
                 if (data.value) {
