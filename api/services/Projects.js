@@ -92,7 +92,7 @@ var model = {
 
 
     requestDemo: function (data, callback) {
-        console.log("inside requestDemo", data)
+        console.log("inside requestDemo", data);
         async.waterfall([
                 function (cbWaterfall) {
                     User.findOne({
@@ -120,11 +120,15 @@ var model = {
                     }];
                     emailData.projectName = data.project.projectName;
                     emailData.name = data.project.name;
-                    emailData.number = data.project.number;
                     emailData.from = data.project.userEmail;
                     emailData.filename = "demorequest.ejs";
                     emailData.subject = "Xantura Innovations - Demo Requested";
                     emailData._id = foundObj._id;
+                    if (data.project.number) {
+                        emailData.number = data.project.number;
+                    } else {
+                        emailData.number = '**not provided**';
+                    }
 
                     Config.email(emailData, function (err, emailRespo) {
                         if (err) {
