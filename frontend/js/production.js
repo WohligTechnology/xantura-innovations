@@ -88517,10 +88517,10 @@ myApp.controller('HomeCtrl', function ($rootScope, $scope, TemplateService, Navi
             type: 'Xantura Innovative Pilots',
             id: "Innovative PoC"
         },
-        // {
-        //     type: 'Xantura Potential Pilots',
-        //     id: "Potential Poc"
-        // },
+        {
+            type: 'Xantura Potential Pilots',
+            id: "Potential Poc"
+        },
         {
             type: 'Cross Industry Innovations',
             id: "More Innovations"
@@ -88537,11 +88537,16 @@ myApp.controller('HomeCtrl', function ($rootScope, $scope, TemplateService, Navi
     $scope.getProjects = function () {
         NavigationService.callApi('Projects/all', function (data) {
             if (data) {
-                $scope.mySlides2 = data.data;
+                $scope.groupBy = _.groupBy(data.data, "type");
                 if ($rootScope.projectId) {
                     $scope.clickType($rootScope.projectId);
                 } else {
-                    $scope.clickType($scope.projectType[1].id);
+                    _.forEach($scope.projectType, function (data) {
+                        if ($scope.groupBy[data.id]) {
+                            $scope.clickType(data.id);
+                            return false;
+                        }
+                    });
                 }
 
                 $rootScope.$on('$stateChangeSuccess',
@@ -88566,24 +88571,6 @@ myApp.controller('HomeCtrl', function ($rootScope, $scope, TemplateService, Navi
             'id': $scope.id
         });
     };
-
-    $scope.mySlides = [{
-            img: 'img/slider-image1.png',
-            title: 'Marco Polo 1',
-            subtitle: 'An AR application to be used on Destinations, Cruises & more.'
-        }, {
-            img: 'img/slider-image1.png',
-            title: 'Marco Polo 2',
-            subtitle: 'An AR application to be used on Destinations, Cruises & more.'
-        },
-        {
-            img: 'img/slider-image1.png',
-            title: 'Marco Polo 3',
-            subtitle: 'An AR application to be used on Destinations, Cruises & more.'
-        }
-    ];
-
-
 
     //DISCUSS NOW MODAL
     $scope.openContact = function () {

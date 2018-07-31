@@ -40,11 +40,11 @@
 
             <!-- Tabs -->
             <div class="text-center  mb-4">
-                <button class="btn btn-outline-success grp-btn text-uppercase" ng-repeat="p in projectType" ng-click="clickType(p.id)" ng-class="{'blue':selected==p.id}">{{p.type}}</button>
+                <button class="btn btn-outline-success grp-btn text-uppercase" ng-repeat="p in projectType" ng-if="groupBy[p.id]" ng-click="clickType(p.id)" ng-class="{'blue':selected==p.id}">{{p.type}}</button>
             </div>
             <!-- Images -->
             <div class="row block">
-                <div class="col-md-6 col-lg-4 col-sm-12" ng-repeat="x in mySlides2 | filter:type">
+                <div class="col-md-6 col-lg-4 col-sm-12" ng-repeat="x in groupBy[selected] | filter:type">
                     <div class="hover-shadow">
                         <a class="bg-block" ui-sref="app.project({id: x._id})">
                             <img class="img-full" src="img/rect.png">
