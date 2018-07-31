@@ -41,7 +41,11 @@ var model = {
                     console.log("data: ", data);
                     emailData.email = [{
                         "email": "tushar.sachde@sptr.co"
-                    }, {
+                    },
+                    {
+                        "email": "vivek@sptr.co"
+                    },
+                    {
                         "email": "tushar@wohlig.com"
                     }];
                     if (data.rating != undefined) {

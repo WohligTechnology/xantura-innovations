@@ -116,19 +116,21 @@ var model = {
                     var emailData = {};
                     console.log("data: ", data);
                     emailData.email = [{
-                        "email": "tushar@wohlig.com"
-                    }];
+                            "email": "tushar.sachde@sptr.co"
+                        },
+                        {
+                            "email": "vivek@sptr.co"
+                        },
+                        {
+                            "email": "tushar@wohlig.com"
+                        }];
                     emailData.projectName = data.project.projectName;
                     emailData.name = data.project.name;
                     emailData.from = data.project.userEmail;
                     emailData.filename = "demorequest.ejs";
                     emailData.subject = "Xantura Innovations - Demo Requested";
                     emailData._id = foundObj._id;
-                    if (data.project.number) {
-                        emailData.number = data.project.number;
-                    } else {
-                        emailData.number = '**not provided**';
-                    }
+                    emailData.number = data.project.number ? data.project.number : "**not provided**";
 
                     Config.email(emailData, function (err, emailRespo) {
                         if (err) {

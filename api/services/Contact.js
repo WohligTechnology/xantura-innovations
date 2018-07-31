@@ -43,6 +43,12 @@ var model = {
                     emailData.a = false;
                     console.log("data: ", data);
                     emailData.email = [{
+                        "email": "tushar.sachde@sptr.co"
+                    },
+                    {
+                        "email": "vivek@sptr.co"
+                    },
+                    {
                         "email": "tushar@wohlig.com"
                     }];
                     emailData.name = data.name;
